@@ -41,7 +41,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="User Name"
+                android:hint="Tên người dùng"
                 android:fontFamily="@font/solway_medium"
                 android:id="@+id/ed_username"
                 android:textColorHint="@color/black"/>
@@ -63,7 +63,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Fullname"
+                android:hint="Tên đầy đủ"
                 android:fontFamily="@font/solway_medium"
                 android:id="@+id/ed_fullnameUser"
                 android:textColorHint="@color/black"/>
@@ -108,7 +108,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Phone"
+                android:hint="SDT"
                 android:fontFamily="@font/solway_medium"
                 android:id="@+id/ed_phoneUsers"
                 android:textColorHint="@color/black"/>
@@ -133,7 +133,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Gender"
+                android:hint="Giới tính"
                 android:fontFamily="@font/solway_medium"
                 android:id="@+id/ed_genderUsers"
                 android:textColorHint="@color/black"/>
@@ -163,7 +163,7 @@
                 android:layout_margin="20dp"
                 android:background="@drawable/button"
                 android:theme="@style/Theme.QuanLyPet.Button_1"
-                android:text="Update"/>
+                android:text="Cập nhật"/>
             <Button
                 android:id="@+id/btn_cancelUser"
                 android:layout_width="120dp"
@@ -175,7 +175,7 @@
                 android:layout_margin="20dp"
                 android:background="@drawable/button"
                 android:theme="@style/Theme.QuanLyPet.Button"
-                android:text="Cancel"/>
+                android:text="Thoát"/>
         </LinearLayout>
 
     </LinearLayout>

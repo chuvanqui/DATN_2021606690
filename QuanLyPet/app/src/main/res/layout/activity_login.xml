@@ -16,7 +16,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/solway_extrabold"
-        android:text="Login"
+        android:text="Đăng nhập"
         android:layout_marginLeft="20dp"
         android:layout_gravity="start"
         android:textColor="@color/black"
@@ -27,7 +27,6 @@
         android:fontFamily="@font/solway_regular"
         android:layout_gravity="start"
         android:layout_marginLeft="20dp"
-        android:text="Enter your username and password"
         android:textColor="#696969"
         android:textSize="11sp" />
     <com.google.android.material.textfield.TextInputLayout
@@ -85,7 +84,7 @@
             android:id="@+id/ckb_nhoMK"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Remember"
+            android:text="nhớ mật khẩu"
             android:textSize="11sp"
             android:fontFamily="@font/solway_medium"
             android:layout_marginLeft="10dp" />
@@ -95,7 +94,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="end"
-            android:text="Forgot password ?"
+            android:text="quên mật khẩu ?"
             android:textColor="#FB0F0F"
             android:textSize="12sp"
             android:fontFamily="@font/solway_medium"/>
@@ -123,7 +122,7 @@
             android:theme="@style/Theme.QuanLyPet.Button_1"
             android:textAllCaps="false"
             android:textSize="16sp"
-            android:text="Logn In"/>
+            android:text="Đăng nhập"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="wrap_content"
@@ -134,7 +133,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/solway_medium"
-            android:text="Don't have an account ?"
+            android:text="Ban chưa có tài khoản?"
             android:textColor="@color/black"
             android:textSize="12sp" />
         <TextView
@@ -143,7 +142,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/solway_medium"
             android:layout_marginLeft="5dp"
-            android:text="Signup"
+            android:text="Đăng ký"
             android:textColor="#00B0FF"
             android:textSize="12sp" />
         <ImageView

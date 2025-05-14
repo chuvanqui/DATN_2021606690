@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/tbl_booking"
-        app:title="Update animal"
+        app:title="Sửa thú cưng"
         app:titleTextColor="@color/white"
         android:layout_gravity="center_horizontal"
         android:background="#FFAB00" />
@@ -50,7 +50,7 @@
         app:startIconDrawable="@drawable/name_animal">
         <com.google.android.material.textfield.TextInputEditText
             android:layout_marginTop="10dp"
-            android:hint="Name animal"
+            android:hint="Tên thú cưng"
             android:fontFamily="@font/solway_medium"
             android:background="@color/white"
             android:id="@+id/up_nameAnimal"
@@ -71,7 +71,7 @@
         app:startIconDrawable="@drawable/age">
         <com.google.android.material.textfield.TextInputEditText
             android:layout_marginTop="10dp"
-            android:hint="Age animal"
+            android:hint="Tuổi thú cưng"
             android:fontFamily="@font/solway_medium"
             android:id="@+id/up_ageAnimal"
             android:background="@color/white"
@@ -97,7 +97,7 @@
             android:layout_marginTop="10dp"
             android:fontFamily="@font/solway_medium"
             android:background="@color/white"
-            android:hint="Species animal" />
+            android:hint="Đặc điểm" />
     </com.google.android.material.textfield.TextInputLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -109,7 +109,7 @@
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:id="@+id/btn_updateAnimal"
-            android:text="Update"
+            android:text="Sửa"
             android:textAllCaps="false"
             android:fontFamily="@font/solway_medium"
             android:background="@drawable/button"
@@ -121,7 +121,7 @@
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:id="@+id/btn_cancel"
-            android:text="Cancel"
+            android:text="Huỷ"
             android:fontFamily="@font/solway_medium"
             android:textAllCaps="false"
             android:background="@drawable/button"

@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/tbl_booking"
-        app:title="Update doctor"
+        app:title="Sửa thông tin bác sĩ "
         app:titleTextColor="@color/white"
         android:layout_gravity="center_horizontal"
         android:background="#FFAB00" />

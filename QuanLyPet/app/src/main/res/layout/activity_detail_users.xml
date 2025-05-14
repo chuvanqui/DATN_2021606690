@@ -177,7 +177,7 @@
             android:id="@+id/btn_update"
             android:layout_width="200dp"
             android:layout_height="60dp"
-            android:text="Cập Nhập"
+            android:text="Cập Nhật"
             android:fontFamily="@font/solway_regular"
             android:background="@drawable/button"
             android:theme="@style/Theme.QuanLyPet.Button_1"

@@ -37,7 +37,7 @@
             android:layout_height="40dp"
             android:layout_marginRight="10dp"
             android:textAllCaps="false"
-            android:text="Sign In"
+            android:text="Đăng nhập"
             android:textStyle="bold"
             android:theme="@style/Theme.QuanLyPet.Button_1"
             android:background="@drawable/button"/>
@@ -47,7 +47,7 @@
             android:layout_height="40dp"
             android:textAllCaps="false"
             android:layout_marginLeft="10dp"
-            android:text="Sign up"
+            android:text="Đăng ký"
             android:textStyle="bold"
             android:theme="@style/Theme.QuanLyPet.Button"
             android:background="@drawable/button"/>

@@ -58,7 +58,7 @@
         app:startIconDrawable="@drawable/name_animal"
         app:hintEnabled="true">
         <com.google.android.material.textfield.TextInputEditText
-            android:hint="Name animal"
+            android:hint="Tên thú cưng"
             android:id="@+id/ed_nameAnimal"
             android:fontFamily="@font/solway_medium"
             android:layout_width="match_parent"
@@ -79,7 +79,7 @@
         app:startIconDrawable="@drawable/age"
         app:hintEnabled="true">
         <com.google.android.material.textfield.TextInputEditText
-            android:hint="Age animal"
+            android:hint="Tuổi thú cưng"
             android:id="@+id/ed_ageAnimal"
             android:fontFamily="@font/solway_medium"
             android:layout_width="match_parent"
@@ -100,7 +100,7 @@
         app:startIconDrawable="@drawable/species"
         app:hintEnabled="true">
         <com.google.android.material.textfield.TextInputEditText
-            android:hint="Species animal"
+            android:hint="Đặc điểm "
             android:id="@+id/ed_speciesAnimal"
             android:fontFamily="@font/solway_medium"
             android:layout_width="match_parent"
@@ -118,7 +118,7 @@
             android:id="@+id/btn_addAnimal"
             android:background="@drawable/button"
             android:theme="@style/Theme.QuanLyPet.Button_1"
-            android:text="Add Animal"
+            android:text="Thêm"
             android:textSize="14sp"
             android:fontFamily="@font/solway_bold"
             android:textAllCaps="false"
