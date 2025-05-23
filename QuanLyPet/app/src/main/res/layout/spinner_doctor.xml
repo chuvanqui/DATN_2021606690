@@ -21,7 +21,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
             android:layout_toRightOf="@id/img_animal"
-            android:text="Animal name"
+            android:text="Tên thú cưng"
             android:layout_centerHorizontal="true"
             android:fontFamily="@font/solway_extrabold"
             android:textColor="@color/black"

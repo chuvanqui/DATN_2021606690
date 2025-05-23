@@ -68,7 +68,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="5dp"
-                    android:text="Phone"
+                    android:text="sdt"
                     android:fontFamily="@font/solway_medium"
                     android:textColor="@color/black"
                     android:textSize="18sp"

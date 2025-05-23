@@ -41,7 +41,7 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Date create"
+                    android:hint="Ngày lập"
                     android:fontFamily="@font/solway_medium"
                     android:backgroundTint="@color/white"
                     android:id="@+id/ed_dateCreate"
@@ -63,7 +63,7 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Date update"
+                    android:hint="Ngày cập nhật"
                     android:fontFamily="@font/solway_medium"
                     android:backgroundTint="@color/white"
                     android:id="@+id/ed_dateUpdate"

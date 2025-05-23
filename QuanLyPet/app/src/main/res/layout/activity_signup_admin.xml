@@ -21,7 +21,7 @@
             android:id="@+id/ed_Username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Username"
+            android:hint="Tên đăng nhập"
             android:fontFamily="@font/biorhyme_bold"
             android:inputType="textPersonName" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -34,7 +34,7 @@
             android:id="@+id/ed_Name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Name"
+            android:hint="Họ tên"
             android:fontFamily="@font/biorhyme_bold"
             android:inputType="textPersonName" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -70,7 +70,7 @@
             android:id="@+id/ed_Password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Password"
+            android:hint="Mật khẩu"
             android:fontFamily="@font/biorhyme_bold"
             android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -85,7 +85,7 @@
             android:id="@+id/ed_RePassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Confirm password"
+            android:hint="Xác nhận mật khẩu"
             android:fontFamily="@font/biorhyme_bold"
             android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -95,5 +95,5 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:backgroundTint="#F13030"
-        android:text="Sign Up" />
+        android:text="Đăng ký" />
 </LinearLayout>

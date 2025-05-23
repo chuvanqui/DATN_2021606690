@@ -23,7 +23,7 @@
             android:layout_toLeftOf="@id/tv_typeAnimal"
             android:layout_toRightOf="@id/img_animal"
             android:fontFamily="@font/solway_extrabold"
-            android:text="Animal name"
+            android:text="Tên thú cưng"
             android:textColor="@color/black"
             android:textSize="16sp"
             android:textStyle="normal" />

@@ -63,7 +63,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Tên đầy đủ"
+                android:hint="Họ tên"
                 android:fontFamily="@font/solway_medium"
                 android:id="@+id/ed_fullnameUser"
                 android:textColorHint="@color/black"/>

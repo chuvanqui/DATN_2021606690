@@ -7,13 +7,14 @@
     android:background="#F2F2F2">
 
     <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tbl_booking"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/tbl_booking"
-        app:title="Update bill"
-        app:titleTextColor="@color/white"
         android:layout_gravity="center_horizontal"
-        android:background="#FFAB00" />
+        android:background="#FFAB00"
+        app:title="Cập nhật hoá đơn"
+        app:titleTextColor="@color/white" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -38,7 +39,7 @@
             android:id="@+id/ed_Username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="User name"
+            android:hint="Tên"
             android:fontFamily="@font/solway_medium"
             android:textColor="@color/black"
             android:inputType="textPersonName" />
@@ -62,7 +63,7 @@
             android:id="@+id/ed_Userphone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="User phone"
+            android:hint="SDT"
             android:fontFamily="@font/solway_medium"
             android:textColor="@color/black"
             android:inputType="textPersonName" />
@@ -86,7 +87,7 @@
             android:id="@+id/ed_time"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Time"
+            android:hint="Thời gian"
             android:fontFamily="@font/solway_medium"
             android:textColor="@color/black"
             android:inputType="time" />
@@ -110,7 +111,7 @@
             android:id="@+id/ed_date"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Date"
+            android:hint="Ngày"
             android:fontFamily="@font/solway_medium"
             android:textColor="@color/black"
             android:inputType="date" />
@@ -134,7 +135,7 @@
             android:id="@+id/ed_price"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Price"
+            android:hint="Giá"
             android:fontFamily="@font/solway_medium"
             android:textColor="@color/black"
             android:inputType="textPersonName" />
@@ -157,7 +158,7 @@
             android:id="@+id/ed_note"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Notes"
+            android:hint="Ghi chú"
             android:fontFamily="@font/solway_medium"
             android:textColor="@color/black"
             android:inputType="textPersonName" />
@@ -173,7 +174,7 @@
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/btn_Update_bill"
-                android:text="Update"
+                android:text="Cập nhật"
                 android:fontFamily="@font/solway_bold"
                 android:textAllCaps="false"
                 android:backgroundTint="#ccc"
@@ -181,18 +182,19 @@
                 android:textColor="@color/white"
                 android:layout_marginRight="10dp"
                 android:background="@drawable/button"/>
+
         <Button
+            android:id="@+id/btn_cancel"
             android:layout_width="120dp"
             android:layout_height="wrap_content"
-            android:id="@+id/btn_cancel"
-            android:text="Cancel"
-            android:fontFamily="@font/solway_bold"
-            android:textAllCaps="false"
-            android:backgroundTint="#FF7878"
+            android:layout_marginLeft="10dp"
             android:background="@drawable/button"
-            android:theme="@style/Theme.QuanLyPet.Button"
+            android:backgroundTint="#FF7878"
+            android:fontFamily="@font/solway_bold"
+            android:text="Huỷ"
+            android:textAllCaps="false"
             android:textColor="@color/white"
-            android:layout_marginLeft="10dp"/>
+            android:theme="@style/Theme.QuanLyPet.Button" />
     </LinearLayout>
 </LinearLayout>
 </LinearLayout>
