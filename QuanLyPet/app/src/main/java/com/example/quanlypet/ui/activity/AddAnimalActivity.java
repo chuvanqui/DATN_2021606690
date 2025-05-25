@@ -14,6 +14,7 @@ import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
@@ -57,7 +58,7 @@ public class AddAnimalActivity extends AppCompatActivity {
         idTollBar = (Toolbar) findViewById(R.id.id_tollBar_addAnimal);
         Tbr = findViewById(R.id.id_tollBar_addAnimal);
         setSupportActionBar(Tbr);
-        getSupportActionBar().setTitle("Add Animal");
+        getSupportActionBar().setTitle("Thêm thú cưng");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         Tbr.setTitleTextColor(Color.WHITE);
         edNameAnimal = (EditText)findViewById(R.id.ed_nameAnimal);
@@ -100,6 +101,59 @@ public class AddAnimalActivity extends AppCompatActivity {
                 finish();
             }
         });
+        //sua lai doan them hinh anh
+//        btnAddAnimal.setOnClickListener(v -> {
+//            try {
+//                // Lấy tên, tuổi và loài từ các ô nhập
+//                String namean = edNameAnimal.getText().toString().trim();
+//                String ageStr = edAgeAnimal.getText().toString().trim();
+//                String species = edSpeciesAnimal.getText().toString().trim();
+//
+//                // Kiểm tra các trường bắt buộc
+//                if (namean.isEmpty() || ageStr.isEmpty() || species.isEmpty()) {
+//                    Toast.makeText(getApplicationContext(), "Vui lòng không để trống các trường!", Toast.LENGTH_SHORT).show();
+//                    return;
+//                }
+//
+//                // Chuyển đổi tuổi sang số nguyên
+//                int age;
+//                try {
+//                    age = Integer.parseInt(ageStr);
+//                } catch (NumberFormatException e) {
+//                    Toast.makeText(getApplicationContext(), "Tuổi không hợp lệ!", Toast.LENGTH_SHORT).show();
+//                    return;
+//                }
+//
+//                // Kiểm tra và chuyển đổi ảnh thành byte[]
+//                Drawable drawable = imgAnh.getDrawable();
+//                if (!(drawable instanceof BitmapDrawable)) {
+//                    Toast.makeText(getApplicationContext(), "Vui lòng chọn ảnh hợp lệ!", Toast.LENGTH_SHORT).show();
+//                    return;
+//                }
+//
+//                Bitmap bitmap = ((BitmapDrawable) drawable).getBitmap();
+//                if (bitmap == null) {
+//                    Toast.makeText(getApplicationContext(), "Ảnh không hợp lệ!", Toast.LENGTH_SHORT).show();
+//                    return;
+//                }
+//
+//                ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+//                bitmap.compress(Bitmap.CompressFormat.PNG, 100, byteArrayOutputStream);
+//                byte[] imageBytes = byteArrayOutputStream.toByteArray();
+//
+//                // Tạo đối tượng Animal và lưu vào database
+//                AnimalObj object = new AnimalObj(usersObj.getId(), namean, imageBytes, age, species, 1);
+//                AnimalDB.getInstance(getApplicationContext()).Dao().insert(object);
+//
+//                Toast.makeText(getApplicationContext(), "Thêm thành công!", Toast.LENGTH_SHORT).show();
+//                finish(); // Kết thúc activity
+//
+//            } catch (Exception e) {
+//                e.printStackTrace();
+//                Toast.makeText(getApplicationContext(), "Lỗi khi thêm thú cưng: " + e.getMessage(), Toast.LENGTH_LONG).show();
+//            }
+//        });
+
     }
 
     @Override

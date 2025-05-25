@@ -1,5 +1,6 @@
 package com.example.quanlypet.ui.welcome;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.RadioButton;
@@ -46,6 +47,9 @@ public class SignupUsersActivity extends AppCompatActivity {
         rdoMale.setChecked(true);
         tvErrors.setText("");
         tvExit.setOnClickListener(view -> {
+            Intent intent = new Intent(SignupUsersActivity.this, WelcomeActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+            startActivity(intent);
             finish();
         });
         btnSignup.setOnClickListener(view -> {
@@ -65,9 +69,18 @@ public class SignupUsersActivity extends AppCompatActivity {
                 UsersDB.getInstance(getApplicationContext()).Dao().insert(usersObj);
                 tvErrors.setText("Thêm thành công.");
                 Toast.makeText(this, "Tạo tài khoản thành công.", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(SignupUsersActivity.this, LoginActivity.class);
+                startActivity(intent);
                 finish();
             }
         });
+    }
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(SignupUsersActivity.this, WelcomeActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+        startActivity(intent);
+        finish();
     }
     public int Validate(){
         String importName = edUsername.getText().toString().trim();

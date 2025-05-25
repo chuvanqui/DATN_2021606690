@@ -18,8 +18,8 @@ import com.example.quanlypet.R;
 import com.example.quanlypet.database.AdminDB;
 import com.example.quanlypet.database.UsersDB;
 import com.example.quanlypet.model.AdminObj;
-import com.example.quanlypet.model.UsersObj;
 import com.google.android.material.textfield.TextInputEditText;
+import com.example.quanlypet.model.UsersObj;
 
 public class LoginActivity extends AppCompatActivity {
     private TextInputEditText edUsername;
@@ -47,7 +47,7 @@ public class LoginActivity extends AppCompatActivity {
         edPassword.setText(preferences.getString("Password",""));
         ckbNhoMK.setChecked(preferences.getBoolean("Remember",false));
         tvSignup.setOnClickListener(view -> {
-                startActivity(new Intent(getApplicationContext(), SignupAdminActivity.class));
+                startActivity(new Intent(getApplicationContext(), SignupUsersActivity.class));
         });
         btnLogin.setOnClickListener(view -> {
             CheckLogin();
@@ -90,5 +90,12 @@ public class LoginActivity extends AppCompatActivity {
             editor.putBoolean("Remember",status);
         }
         editor.commit();
+    }
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(LoginActivity.this, WelcomeActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+        startActivity(intent);
+        finish();
     }
 }

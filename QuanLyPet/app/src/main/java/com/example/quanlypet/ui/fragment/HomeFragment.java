@@ -163,7 +163,10 @@ public class HomeFragment extends Fragment {
         });
         linerMess.setOnClickListener(v -> {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-                Uri uri = Uri.parse("http://m.me/100088046954126");
+                //Uri uri = Uri.parse("http://m.me/100088046954126");
+                //Uri uri = Uri.parse("https://www.facebook.com/messages/t/623121904224878");
+                Uri uri = Uri.parse("https://m.me/623121904224878");
+
                 startActivity(new Intent(Intent.ACTION_VIEW, uri));
             }
         });
@@ -223,7 +226,6 @@ public class HomeFragment extends Fragment {
         barChart.setOnChartValueSelectedListener(new OnChartValueSelectedListener() {
             @Override
             public void onValueSelected(Entry e, Highlight h) {
-                //CHO NAY DUNG CO XOA CUA TAO
                 Dialog dialog = new Dialog(getActivity());
                 dialog.setContentView(R.layout.dialog_thongketuan);
                 Window window = dialog.getWindow();
