@@ -170,16 +170,18 @@ public class AnimalActivity extends AppCompatActivity implements AnimalAdapter.C
             int age = Integer.parseInt(upageAnimal.getText().toString().trim());
             String speciesAnimal = upspeciesAnimal.getText().toString().trim();
             if (nameAnimal.isEmpty() || speciesAnimal.isEmpty()) {
-                Toast.makeText(getApplicationContext(), "ko dc de trong", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Không được để trống !", Toast.LENGTH_SHORT).show();
             } else {
                 object.setName(nameAnimal);
                 object.setAvatar(anhup);
                 object.setAge(age);
                 object.setSpecies(speciesAnimal);
                 AnimalDB.getInstance(getApplicationContext()).Dao().edit(object);
-                arrayList = (ArrayList<AnimalObj>) AnimalDB.getInstance(getApplicationContext()).Dao().getAllData();
+               // arrayList = (ArrayList<AnimalObj>) AnimalDB.getInstance(getApplicationContext()).Dao().getAllData();
+                arrayList = (ArrayList<AnimalObj>) AnimalDB.getInstance(getApplicationContext())
+                        .Dao().getIDUsers(String.valueOf(usersObj.getId()));
                 adapterAnimal.setData(arrayList);
-                Toast.makeText(getApplicationContext(), "sua thanh cong", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Cập nhật thành công !", Toast.LENGTH_SHORT).show();
                 dialog.cancel();
             }
         });
