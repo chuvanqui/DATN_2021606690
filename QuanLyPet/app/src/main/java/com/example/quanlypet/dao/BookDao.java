@@ -43,4 +43,20 @@ public interface BookDao {
 
     @Query("SELECT *FROM book where timeHold between :dateStat AND :dataEnd")
     List<BookObj> checkBooking3(String dateStat,String dataEnd);
+
+    @Query("SELECT * FROM book WHERE id_doctor = :IdDoctor AND (" +
+            "(:startTime BETWEEN time AND timeHold) OR " +
+            "(:endTime BETWEEN time AND timeHold) OR " +
+            "(time BETWEEN :startTime AND :endTime) OR " +
+            "(timeHold BETWEEN :startTime AND :endTime))")
+    List<BookObj> checkDoctorBookingConflict(String startTime, String endTime, int IdDoctor);
+
+//    @Query("SELECT * FROM book WHERE doctorId = :doctorId AND (" +
+//            "(:startTime BETWEEN time AND timeHold) OR " +
+//            "(:endTime BETWEEN time AND timeHold) OR " +
+//            "(time BETWEEN :startTime AND :endTime) OR " +
+//            "(timeHold BETWEEN :startTime AND :endTime))")
+//    List<BookObj> checkDoctorBookingConflict(String startTime, String endTime, int doctorId);
+
+
 }

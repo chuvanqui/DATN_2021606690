@@ -1,6 +1,7 @@
 package com.example.quanlypet.ui.fragment;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
@@ -130,6 +131,7 @@ public class DoctorFragment extends Fragment implements DoctorAdapter.Callback {
             TextInputEditText edAddressDocter = dialog.findViewById(R.id.ed_addressDocter);
             TextInputEditText edSpecializeDocter = dialog.findViewById(R.id.ed_specializeDocter);
             Button btnUpdateDocter = dialog.findViewById(R.id.btn_updateDocter);
+            Button btnDeleteDocter = dialog.findViewById(R.id.btn_deleteDocter);
             Button btnCanel = dialog.findViewById(R.id.btn_canel);
             edPhoneDocter.setText(doctorObj.getPhone());
             edEmailDocter.setText(doctorObj.getEmail());
@@ -181,11 +183,45 @@ public class DoctorFragment extends Fragment implements DoctorAdapter.Callback {
                     list = (ArrayList<DoctorObj>) DoctorDB.getInstance(getActivity()).Dao().getAllData();
                     adapter.setDataDocter(list);
                     Toast.makeText(getActivity(), "Sửa thành công", Toast.LENGTH_SHORT).show();
-                    dialog.cancel();
+                    dialog.dismiss();
                 }
+            });
+            // Nút xoá bác sĩ
+            btnDeleteDocter.setOnClickListener(v -> {
+                new AlertDialog.Builder(getContext())
+                        .setTitle("Xác nhận xoá")
+                        .setMessage("Bạn có chắc chắn muốn xoá bác sĩ \"" + doctorObj.getName() + "\" không?")
+                        .setPositiveButton("Xoá", (dialogInterface, i) -> {
+                            DoctorDB.getInstance(getActivity()).Dao().delete(doctorObj);
+                            list = (ArrayList<DoctorObj>) DoctorDB.getInstance(getActivity()).Dao().getAllData();
+                            adapter.setDataDocter(list);
+                            Toast.makeText(getActivity(), "Xoá thành công", Toast.LENGTH_SHORT).show();
+                            dialog.dismiss();
+                        })
+                        .setNegativeButton("Huỷ", null)
+                        .show();
             });
             btnCanel.setOnClickListener(v -> dialog.cancel());
             dialog.show();
+        }
+    }
+    public void delete(DoctorObj doctorObj) {
+        if (user.equals("Admin")) {
+            new AlertDialog.Builder(getContext())
+                    .setTitle("Xác nhận xoá")
+                    .setMessage("Bạn có chắc chắn muốn xoá bác sĩ \"" + doctorObj.getName() + "\" không?")
+                    .setPositiveButton("Xoá", (dialogInterface, i) -> {
+                        // Xoá bác sĩ trong DB
+                        DoctorDB.getInstance(getActivity()).Dao().delete(doctorObj);
+
+                        // Cập nhật lại danh sách
+                        list = (ArrayList<DoctorObj>) DoctorDB.getInstance(getActivity()).Dao().getAllData();
+                        adapter.setDataDocter(list);
+
+                        Toast.makeText(getActivity(), "Xoá thành công", Toast.LENGTH_SHORT).show();
+                    })
+                    .setNegativeButton("Huỷ", null)
+                    .show();
         }
     }
 

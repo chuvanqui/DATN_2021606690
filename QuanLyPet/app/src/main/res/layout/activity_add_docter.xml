@@ -103,7 +103,8 @@
                     android:fontFamily="@font/solway_medium"
                     android:backgroundTint="@color/white"
                     android:id="@+id/ed_phoneDocter"
-                    android:textColorHint="@color/black"/>
+                    android:textColorHint="@color/black"
+                    android:inputType="phone"/>
             </com.google.android.material.textfield.TextInputLayout>
             <RadioGroup
                 android:layout_width="match_parent"

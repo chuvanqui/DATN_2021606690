@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/tbl_booking"
-        app:title="Sửa thông tin bác sĩ "
+        app:title="Thông tin bác sĩ "
         app:titleTextColor="@color/white"
         android:layout_gravity="center_horizontal"
         android:background="#FFAB00" />
@@ -206,7 +206,7 @@
                 <Button
                     android:id="@+id/btn_updateDocter"
                     android:layout_marginRight="10dp"
-                    android:layout_width="150dp"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:backgroundTint="#E11515"
                     android:theme="@style/Theme.QuanLyPet.Button_1"
@@ -215,12 +215,23 @@
                     android:background="@drawable/button"
                     android:text="Sửa"/>
                 <Button
+                    android:id="@+id/btn_deleteDocter"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#E11515"
+                    android:theme="@style/Theme.QuanLyPet.Button_1"
+                    android:textAllCaps="false"
+                    android:fontFamily="@font/solway_bold"
+                    android:background="@drawable/button"
+                    android:text="Xoá"/>
+                <Button
                     android:id="@+id/btn_canel"
                     android:backgroundTint="#E11515"
                     android:background="@drawable/button"
                     android:textAllCaps="false"
                     android:theme="@style/Theme.QuanLyPet.Button"
-                    android:layout_width="150dp"
+                    android:layout_width="100dp"
                     android:fontFamily="@font/solway_bold"
                     android:layout_height="wrap_content"
                     android:text="Hủy"/>

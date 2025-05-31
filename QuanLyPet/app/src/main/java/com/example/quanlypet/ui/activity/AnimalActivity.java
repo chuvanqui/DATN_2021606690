@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.SearchManager;
 import android.content.Intent;
@@ -140,6 +141,7 @@ public class AnimalActivity extends AppCompatActivity implements AnimalAdapter.C
         imgAnhup = dialog.findViewById(R.id.up_img_anh);
         ImageView btnAlbumUp = dialog.findViewById(R.id.btn_album_up);
         Button btnUpDate = dialog.findViewById(R.id.btn_updateAnimal);
+        Button btnDelete = dialog.findViewById(R.id.btn_deleteAnimal);
         Button btnCancel = dialog.findViewById(R.id.btn_cancel);
         LinearLayout linearshare1 = dialog.findViewById(R.id.up_liner_share_animal);
         btnAlbumUp.setOnClickListener(v ->{
@@ -188,6 +190,45 @@ public class AnimalActivity extends AppCompatActivity implements AnimalAdapter.C
         btnCancel.setOnClickListener(v -> {
             dialog.cancel();
         });
+        btnDelete.setOnClickListener(v -> {
+            new AlertDialog.Builder(AnimalActivity.this)
+                    .setTitle("Xác nhận xoá")
+                    .setMessage("Bạn có chắc muốn xoá thú cưng \"" + object.getName() + "\" không?")
+                    .setPositiveButton("Xoá", (dialogInterface, i) -> {
+                        AnimalDB.getInstance(getApplicationContext()).Dao().delete(object);
+                        arrayList = (ArrayList<AnimalObj>) AnimalDB.getInstance(getApplicationContext())
+                                .Dao().getIDUsers(String.valueOf(usersObj.getId()));
+                        adapterAnimal.setData(arrayList);
+                        Toast.makeText(getApplicationContext(), "Đã xoá thú cưng!", Toast.LENGTH_SHORT).show();
+                        dialog.dismiss();
+                    })
+                    .setNegativeButton("Huỷ", (dialogInterface, i) -> dialogInterface.dismiss())
+                    .show();
+        });
+        //dialog.show();
+    }
+
+    public void Delete(AnimalObj object) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(AnimalActivity.this);
+        builder.setTitle("Xác nhận xóa");
+        builder.setMessage("Bạn có chắc muốn xóa thú cưng \"" + object.getName() + "\" không?");
+
+        builder.setPositiveButton("Xóa", (dialog, which) -> {
+            AnimalDB.getInstance(getApplicationContext()).Dao().delete(object);
+
+            // Cập nhật lại danh sách thú cưng sau khi xóa
+            arrayList = (ArrayList<AnimalObj>) AnimalDB.getInstance(getApplicationContext())
+                    .Dao().getIDUsers(String.valueOf(usersObj.getId()));
+            adapterAnimal.setData(arrayList);
+
+            Toast.makeText(getApplicationContext(), "Đã xóa thú cưng!", Toast.LENGTH_SHORT).show();
+        });
+
+        builder.setNegativeButton("Hủy", (dialog, which) -> {
+            dialog.dismiss();
+        });
+
+        AlertDialog dialog = builder.create();
         dialog.show();
     }
 
@@ -208,3 +249,24 @@ public class AnimalActivity extends AppCompatActivity implements AnimalAdapter.C
                 }
             });
 }
+
+
+//btnDelete.setOnClickListener(v -> {
+//        new AlertDialog.Builder(AnimalActivity.this)
+//            .setTitle("Xác nhận xoá")
+//            .setMessage("Bạn có chắc muốn xoá thú cưng \"" + object.getName() + "\" không?")
+//        .setPositiveButton("Xoá", (dialogInterface, i) -> {
+//        // Xoá theo id
+//        AnimalDB.getInstance(getApplicationContext())
+//        .Dao().deleteById(object.getId());
+//
+//// Cập nhật danh sách
+//arrayList = (ArrayList<AnimalObj>) AnimalDB.getInstance(getApplicationContext())
+//        .Dao().getIDUsers(String.valueOf(usersObj.getId()));
+//        adapterAnimal.setData(arrayList);
+//                Toast.makeText(getApplicationContext(), "Đã xoá thú cưng!", Toast.LENGTH_SHORT).show();
+//                dialog.dismiss();
+//            })
+//                    .setNegativeButton("Huỷ", (dialogInterface, i) -> dialogInterface.dismiss())
+//        .show();
+//});

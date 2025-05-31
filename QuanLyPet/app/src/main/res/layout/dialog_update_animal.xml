@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/tbl_booking"
-        app:title="Sửa thú cưng"
+        app:title="Thông tin thú cưng"
         app:titleTextColor="@color/white"
         android:layout_gravity="center_horizontal"
         android:background="#FFAB00" />
@@ -106,7 +106,7 @@
         android:gravity="center"
         android:layout_marginTop="50dp">
         <Button
-            android:layout_width="150dp"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:id="@+id/btn_updateAnimal"
             android:text="Sửa"
@@ -118,7 +118,19 @@
             android:textColor="@color/black"
             android:layout_marginRight="10dp"/>
         <Button
-            android:layout_width="150dp"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_deleteAnimal"
+            android:text="Xoá"
+            android:textAllCaps="false"
+            android:fontFamily="@font/solway_medium"
+            android:background="@drawable/button"
+            android:backgroundTint="#ccc"
+            android:theme="@style/Theme.QuanLyPet.Button_1"
+            android:textColor="@color/black"
+            android:layout_marginRight="10dp"/>
+        <Button
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:id="@+id/btn_cancel"
             android:text="Huỷ"

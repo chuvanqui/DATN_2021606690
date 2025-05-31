@@ -57,57 +57,63 @@
                             android:textColor="@color/black"
                             android:textSize="24sp" />
                     </LinearLayout>
-
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        android:padding="8dp">
 
-                        <LinearLayout
-                            android:layout_width="wrap_content"
+                        <!-- Icon Loại -->
+                        <ImageView
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:orientation="horizontal">
+                            android:layout_weight="1"
+                            android:src="@drawable/species"
+                            android:contentDescription="Icon Loại"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginEnd="4dp"/>
 
-                            <TextView
+                        <!-- Text Loại (chiếm 2 phần) -->
+                        <TextView
+                            android:id="@+id/tv_loai"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:text="Chó Pug mặt xệ siêu dễ thương và thân thiện với trẻ nhỏ"
+                            android:textSize="14sp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/solway_medium"
+                            android:maxLines="5"
+                            android:ellipsize="none"
+                            android:inputType="textMultiLine"
+                            android:singleLine="false" />
+
+                        <!-- Cột Tuổi (icon + text) -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical|end">
+
+                            <ImageView
                                 android:layout_width="20dp"
                                 android:layout_height="20dp"
-                                android:layout_marginLeft="10dp"
-                                android:background="@drawable/species" />
-
-                            <TextView
-                                android:id="@+id/tv_loai"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="10dp"
-                                android:text="Loại"
-                                android:fontFamily="@font/solway_medium"
-                                android:textSize="18sp"
-                                android:textColor="@color/black" />
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="30dp"
-                            android:orientation="horizontal">
-
-                            <TextView
-                                android:layout_width="20dp"
-                                android:layout_height="20dp"
-                                android:layout_marginLeft="10dp"
-                                android:background="@drawable/age" />
+                                android:src="@drawable/age"
+                                android:contentDescription="Icon Tuổi"
+                                android:layout_marginEnd="4dp"/>
 
                             <TextView
                                 android:id="@+id/tv_age"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginLeft="5dp"
-                                android:fontFamily="@font/solway_medium"
+                                android:text="5 tuổi"
                                 android:textSize="14sp"
-                                android:text="1" />
+                                android:textColor="@color/black"
+                                android:fontFamily="@font/solway_medium" />
                         </LinearLayout>
                     </LinearLayout>
+
                 </LinearLayout>
             </LinearLayout>
         </RelativeLayout>

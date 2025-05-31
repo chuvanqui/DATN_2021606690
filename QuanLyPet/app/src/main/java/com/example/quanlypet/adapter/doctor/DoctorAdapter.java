@@ -100,13 +100,17 @@ public class DoctorAdapter extends RecyclerView.Adapter<DoctorAdapter.DocterView
         }else{
             holder.tv_Gender.setText("Nữ");
         }
-        holder.id_RelativeLayout.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View v) {
-                callback.update(docterObj);
-                return false;
-            }
+//        holder.id_RelativeLayout.setOnLongClickListener(new View.OnLongClickListener() {
+//            @Override
+//            public boolean onLongClick(View v) {
+//                callback.update(docterObj);
+//                return false;
+//            }
+//        });
+        holder.id_RelativeLayout.setOnClickListener(v -> {
+            callback.update(docterObj);
         });
+
         holder.img_Information.setOnClickListener(v->{
             ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
             bitmap.compress(Bitmap.CompressFormat.PNG, 100, byteArrayOutputStream);

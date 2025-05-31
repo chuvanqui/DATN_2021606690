@@ -2,6 +2,7 @@
     <!-- Base application theme. -->
     <style name="Theme.QuanLyPet" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="colorPrimary">#FFB300</item>
+<!--       <item name="colorPrimary">#E9D7B4</item>-->
         <item name="colorPrimaryVariant">#FF9100</item>
         <item name="colorOnPrimary">@color/white</item>
         <item name="colorSecondary">#23E587</item>
